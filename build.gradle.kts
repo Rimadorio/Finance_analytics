@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.example"
-version = "1.0.0"
+version = "0.0.1-SNAPSHOT"
 
 java {
     toolchain {
@@ -22,10 +22,16 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+sonar {
+    properties {
+        property("sonar.projectKey", "Rimadorio_finance-analytics")
+        property("sonar.organization", "rimadorio") // Убедитесь, что имя организации точно такое
+    }
 }

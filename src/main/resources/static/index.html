@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Финансовая аналитика</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <h2>Домашние финансы</h2>
+        <nav>
+            <button type="button" class="nav-btn" data-section="deposit">Вклад</button>
+            <button type="button" class="nav-btn" data-section="mortgage">Ипотека</button>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <!-- ВКЛАД -->
+        <section id="deposit" class="section">
+            <h1>Расчёт доходности вклада</h1>
+
+            <form id="deposit-form">
+                <div class="field">
+                    <label for="dep-amount">Сумма вклада (₽)</label>
+                    <input type="text" id="dep-amount" class="money-input" inputmode="decimal" value="100 000" required>
+                </div>
+                <div class="field">
+                    <label for="dep-term">Срок (мес.)</label>
+                    <input type="number" id="dep-term" value="12" min="1" required>
+                </div>
+                <div class="field">
+                    <label for="dep-rate">Годовая ставка (%)</label>
+                    <input type="number" id="dep-rate" value="12" step="0.01" min="0.01" required>
+                </div>
+                <div class="field field-checkbox">
+                    <label>
+                        <input type="checkbox" id="dep-cap" checked>
+                        Капитализация процентов
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Рассчитать</button>
+                    <button type="button" class="btn-secondary" id="dep-reset">Сбросить</button>
+                </div>
+            </form>
+
+            <div id="deposit-result" class="result" hidden></div>
+        </section>
+
+        <!-- ИПОТЕКА -->
+        <section id="mortgage" class="section">
+            <h1>Досрочное погашение ипотеки</h1>
+
+            <form id="mortgage-form">
+                <div class="field">
+                    <label for="m-strategy">Стратегия</label>
+                    <select id="m-strategy">
+                        <option value="term">Сокращение срока</option>
+                        <option value="payment">Сокращение платежа</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="m-debt">Остаток основного долга (₽)</label>
+                    <input type="text" id="m-debt" class="money-input" inputmode="decimal" value="2 000 000" required>
+                </div>
+                <div class="field">
+                    <label for="m-term">Оставшийся срок (мес.)</label>
+                    <input type="number" id="m-term" value="120" min="1" required>
+                </div>
+                <div class="field">
+                    <label for="m-rate">Годовая ставка (%)</label>
+                    <input type="number" id="m-rate" value="12" step="0.01" min="0.01" required>
+                </div>
+                <div class="field">
+                    <label for="m-extra">Сумма досрочного погашения в месяц (₽)</label>
+                    <input type="text" id="m-extra" class="money-input" inputmode="decimal" value="10 000" required>
+                </div>
+                <div class="field">
+                    <label for="m-freq">Периодичность (раз в N мес.)</label>
+                    <input type="number" id="m-freq" value="1" min="1" required>
+                </div>
+                <div class="field">
+                    <label for="m-period">Период досрочного погашения (мес., 0 = весь срок)</label>
+                    <input type="number" id="m-period" value="0" min="0">
+                </div>
+
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Рассчитать</button>
+                    <button type="button" class="btn-secondary" id="mort-reset">Сбросить</button>
+                </div>
+            </form>
+
+            <div id="mortgage-result" class="result" hidden></div>
+        </section>
+    </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

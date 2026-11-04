@@ -1,9 +1,7 @@
 # Финансовая аналитика (Finance Analytics)
 
 [![SonarCloud Analysis](https://github.com/Rimadorio/Finance_analytics/actions/workflows/sonar.yml/badge.svg)](https://github.com/Rimadorio/Finance_analytics/actions/workflows/sonar.yml)
-<!-- Сюда можно добавить бейдж Quality Gate из SonarCloud. 
-     Зайдите в проект на SonarCloud -> Project Information -> Badges -> выберите Quality Gate -> Markdown -->
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Rimadorio_finance-analytics&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Rimadorio_finance-analytics)
+
 
 Веб-приложение для финансового анализа с бэкендом на Java (Spring Boot). 
 Позволяет рассчитывать доходность вкладов и симулировать досрочное погашение ипотеки.

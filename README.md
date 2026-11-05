@@ -1,4 +1,4 @@
-# Финансовая аналитика (Finance Analytics)
+# Домашние финансы
 
 [![SonarCloud Analysis](https://github.com/Rimadorio/Finance_analytics/actions/workflows/sonar.yml/badge.svg)](https://github.com/Rimadorio/Finance_analytics/actions/workflows/sonar.yml)
 
